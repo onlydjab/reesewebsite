@@ -20,7 +20,7 @@
     site: {
       name: 'DJ Reese',
       tagline: 'Open Format. Any Crowd. All Energy.',
-      url: 'https://djreese.com',
+      url: 'https://omgdjreese.com',
       description: 'DJ Reese is an open format DJ based in Tuscaloosa, Alabama. Clubs, bars, fraternity and private events across the Southeast and beyond. Seamless transitions, unique mixes, unmatched energy.'
     },
     theme: {

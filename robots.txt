@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin.html
 
-Sitemap: https://djreese.com/sitemap.xml
+Sitemap: https://omgdjreese.com/sitemap.xml

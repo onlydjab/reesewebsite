@@ -14,7 +14,7 @@ No build step. No npm. No server. Drop it on GitHub Pages and it runs.
 | 1 | **Optional: add a booking email.** The site ships with no email address — bookings go to the phone number by text. Add one here if you want email instead. | Dashboard → *Text & Content* → *Bookings & contact* |
 | 2 | **Add YouTube + SoundCloud links.** They ship switched **off** because the real handles weren't known — guessing would have linked to strangers' profiles. Paste the real URLs and flip *Show on*. | Dashboard → *Social Links* |
 | 3 | **Change the dashboard password.** The username is `reese`; the password is not stored in this repo. | Dashboard → *Settings* → *Change password* |
-| 4 | **Replace the domain.** `https://djreese.com` appears in the canonical tag, Open Graph tags, `sitemap.xml` and `robots.txt`. Swap it for your real URL. | `index.html`, `sitemap.xml`, `robots.txt` |
+| 4 | ~~Replace the domain.~~ **Done** — the site is live at `https://omgdjreese.com`. The `CNAME` file sets the custom domain; changing it means updating the canonical tag, Open Graph tags, `sitemap.xml` and `robots.txt` too. | `CNAME`, `index.html`, `sitemap.xml`, `robots.txt` |
 | 5 | **Fill in the availability calendar.** It ships with every future date marked available and nothing booked — deliberately, so the site never shows made-up gigs. | Dashboard → *Availability* |
 
 ---

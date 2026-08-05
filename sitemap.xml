@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://djreese.com/</loc>
+    <loc>https://omgdjreese.com/</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://djreese.com/assets/img/og-image.jpg</image:loc>
+      <image:loc>https://omgdjreese.com/assets/img/og-image.jpg</image:loc>
       <image:title>DJ Reese — Open Format DJ</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://djreese.com/assets/img/gallery/reese-crowd-fisheye-full.jpg</image:loc>
+      <image:loc>https://omgdjreese.com/assets/img/gallery/reese-crowd-fisheye-full.jpg</image:loc>
       <image:title>DJ Reese live crowd</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://djreese.com/assets/img/gallery/reese-club-purple-full.jpg</image:loc>
+      <image:loc>https://omgdjreese.com/assets/img/gallery/reese-club-purple-full.jpg</image:loc>
       <image:title>DJ Reese behind the decks</image:title>
     </image:image>
   </url>

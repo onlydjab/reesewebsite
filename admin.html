@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — DJ Reese</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#05060F">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin">
+
+<!-- ══════════════════ LOGIN ══════════════════ -->
+<div class="login" id="login">
+  <form class="login__card" id="loginForm" autocomplete="on">
+    <img class="login__logo" src="assets/img/logo-240.png" alt="DJ Reese" width="661" height="308">
+    <h1 class="login__title">Site Dashboard</h1>
+    <p class="login__sub">Sign in to edit the site.</p>
+
+    <div class="field">
+      <label for="user">Username</label>
+      <input id="user" name="username" type="text" autocomplete="username" required autofocus>
+    </div>
+    <div class="field">
+      <label for="pass">Password</label>
+      <input id="pass" name="password" type="password" autocomplete="current-password" required>
+    </div>
+
+    <button type="submit" class="btn btn--primary btn--lg btn--block">Sign in</button>
+    <p class="login__err" id="loginErr" role="alert"></p>
+    <a class="login__back" href="index.html">&larr; Back to site</a>
+  </form>
+</div>
+
+<!-- ══════════════════ DASHBOARD ══════════════════ -->
+<div class="dash" id="dash" hidden>
+
+  <header class="dash__top">
+    <div class="dash__brand">
+      <img src="assets/img/logo-240.png" alt="DJ Reese" width="661" height="308">
+      <span class="dash__tag">Dashboard</span>
+    </div>
+    <div class="dash__top-actions">
+      <span class="save-chip" id="saveChip">Saved</span>
+      <a class="btn btn--ghost btn--sm" href="index.html" target="_blank" rel="noopener">Preview site ↗</a>
+      <button class="btn btn--primary btn--sm" id="publishTop">Publish</button>
+      <button class="btn btn--ghost btn--sm" id="logout">Sign out</button>
+    </div>
+  </header>
+
+  <div class="dash__body">
+    <nav class="dash__nav" aria-label="Dashboard sections">
+      <button class="dash__navbtn is-active" data-panel="content">Text &amp; Content</button>
+      <button class="dash__navbtn" data-panel="media">Photos &amp; Video</button>
+      <button class="dash__navbtn" data-panel="availability">Availability</button>
+      <button class="dash__navbtn" data-panel="socials">Social Links</button>
+      <button class="dash__navbtn" data-panel="theme">Colour Scheme</button>
+      <button class="dash__navbtn" data-panel="publish">Publish</button>
+      <button class="dash__navbtn" data-panel="settings">Settings</button>
+    </nav>
+
+    <main class="dash__main">
+
+      <!-- ---------- CONTENT ---------- -->
+      <section class="panel is-active" data-panel="content">
+        <header class="panel__head">
+          <h2>Text &amp; Content</h2>
+          <p>Every piece of copy on the site. Changes save as you type and appear instantly in preview.</p>
+        </header>
+        <div id="contentFields"></div>
+      </section>
+
+      <!-- ---------- MEDIA ---------- -->
+      <section class="panel" data-panel="media">
+        <header class="panel__head">
+          <h2>Photos &amp; Video</h2>
+          <p>Manage what appears in the Media section. Drag the arrows to reorder.</p>
+        </header>
+
+        <div class="addbar">
+          <button class="btn btn--primary btn--sm" id="addPhoto">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Upload photo
+          </button>
+          <button class="btn btn--ghost btn--sm" id="addVideo">Add video link</button>
+          <input type="file" id="photoInput" accept="image/*" multiple hidden>
+        </div>
+        <p class="hint">
+          Uploads are resized to 1600px and stored inside <code>content.json</code>. For the fastest site,
+          instead drop optimised files into <code>assets/img/gallery/</code> and reference them by path
+          (see <code>tools/optimize-images.py</code> in the README).
+        </p>
+
+        <div class="media-list" id="mediaList"></div>
+      </section>
+
+      <!-- ---------- AVAILABILITY ---------- -->
+      <section class="panel" data-panel="availability">
+        <header class="panel__head">
+          <h2>Availability</h2>
+          <p>Click a date to cycle it: Available → On hold → Booked → Available. Add a venue label so it shows on hover.</p>
+        </header>
+
+        <div class="avail-editor">
+          <div class="cal" id="adminCal">
+            <div class="cal__bar">
+              <button class="cal__nav" id="acPrev" aria-label="Previous month">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <h3 class="cal__month" id="acMonth">—</h3>
+              <button class="cal__nav" id="acNext" aria-label="Next month">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <div class="cal__dow" aria-hidden="true">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div class="cal__grid" id="acGrid"></div>
+            <div class="cal__legend">
+              <span><i class="dot dot--available"></i>Available</span>
+              <span><i class="dot dot--held"></i>On hold</span>
+              <span><i class="dot dot--booked"></i>Booked</span>
+            </div>
+          </div>
+
+          <aside class="avail-editor__side">
+            <h3>Marked dates</h3>
+            <div id="markedList" class="marked-list"></div>
+            <button class="btn btn--ghost btn--sm btn--block" id="clearDates">Clear all marked dates</button>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ---------- SOCIALS ---------- -->
+      <section class="panel" data-panel="socials">
+        <header class="panel__head">
+          <h2>Social Links</h2>
+          <p>Each link shows its username on the site. Toggle one off to hide it without deleting.</p>
+        </header>
+        <div class="addbar"><button class="btn btn--primary btn--sm" id="addSocial">Add social link</button></div>
+        <div class="social-list" id="socialList"></div>
+      </section>
+
+      <!-- ---------- THEME ---------- -->
+      <section class="panel" data-panel="theme">
+        <header class="panel__head">
+          <h2>Colour Scheme</h2>
+          <p>Pick a preset or set your own. The whole site re-skins from these six colours.</p>
+        </header>
+
+        <h3 class="sub">Presets</h3>
+        <div class="presets" id="presets"></div>
+
+        <h3 class="sub">Custom colours</h3>
+        <div class="swatches" id="swatches"></div>
+
+        <h3 class="sub">Live preview</h3>
+        <div class="theme-preview" id="themePreview">
+          <div class="tp__bar"><span class="tp__logo">REE$E</span><span class="tp__dots"><i></i><i></i><i></i></span></div>
+          <div class="tp__hero">
+            <p class="tp__eyebrow">Tuscaloosa, Alabama</p>
+            <h4>Open Format.<br><em>Any Crowd.</em><br>All Energy.</h4>
+            <div class="tp__btns"><span class="tp__btn tp__btn--p">Book DJ Reese</span><span class="tp__btn">Download EPK</span></div>
+          </div>
+          <div class="tp__stats"><span>7</span><span>2+</span><span>18+</span><span>1</span></div>
+        </div>
+        <button class="btn btn--ghost btn--sm" id="resetTheme">Reset to default</button>
+      </section>
+
+      <!-- ---------- PUBLISH ---------- -->
+      <section class="panel" data-panel="publish">
+        <header class="panel__head">
+          <h2>Publish</h2>
+          <p>Your edits are saved in this browser only. To put them live, replace <code>data/content.json</code> in the repo.</p>
+        </header>
+
+        <ol class="steps steps--pub">
+          <li><span>1</span><div>
+            <strong>Download the updated file</strong>
+            <p>It downloads as <code>content.json</code>.</p>
+            <button class="btn btn--primary btn--sm" id="downloadJson">Download content.json</button>
+          </div></li>
+          <li><span>2</span><div>
+            <strong>Replace it in your repo</strong>
+            <p>On GitHub open <code>data/content.json</code> → pencil icon → paste the new contents → Commit. Or drag the file into the <code>data/</code> folder to overwrite it.</p>
+            <button class="btn btn--ghost btn--sm" id="copyJson">Copy JSON to clipboard</button>
+          </div></li>
+          <li><span>3</span><div>
+            <strong>Wait about a minute</strong>
+            <p>GitHub Pages rebuilds automatically, then the live site shows your changes.</p>
+          </div></li>
+        </ol>
+
+        <div class="danger">
+          <div>
+            <strong>Discard local changes</strong>
+            <p>Throws away everything unpublished and reloads the published version.</p>
+          </div>
+          <button class="btn btn--ghost btn--sm" id="discardDraft">Discard draft</button>
+        </div>
+
+        <details class="jsonbox">
+          <summary>View raw JSON</summary>
+          <pre id="jsonOut"></pre>
+        </details>
+      </section>
+
+      <!-- ---------- SETTINGS ---------- -->
+      <section class="panel" data-panel="settings">
+        <header class="panel__head">
+          <h2>Settings</h2>
+          <p>Dashboard access.</p>
+        </header>
+
+        <div class="card">
+          <h3>Change password</h3>
+          <p class="hint">Type a new password to generate its hash, then paste the line into <code>assets/js/admin-config.js</code> and commit.</p>
+          <div class="field">
+            <label for="newPass">New password</label>
+            <input id="newPass" type="text" placeholder="Choose something long">
+          </div>
+          <div class="field">
+            <label for="newUser">Username</label>
+            <input id="newUser" type="text" placeholder="reese">
+          </div>
+          <button class="btn btn--primary btn--sm" id="genHash">Generate config line</button>
+          <pre id="hashOut" class="hashout" hidden></pre>
+        </div>
+
+        <div class="card card--warn">
+          <h3>About dashboard security</h3>
+          <p>
+            This login runs entirely in the browser, which is the trade-off for a site hosted free on
+            GitHub Pages with no server. It stops casual visitors, but it is <strong>not</strong> real
+            access control — someone who reads the page source can see the password hash.
+          </p>
+          <p>
+            Never store anything sensitive here. If you need genuine protection, put the site behind
+            Cloudflare Access (free) or move to a host with server-side auth. The README has steps.
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="assets/js/admin-config.js"></script>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

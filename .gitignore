@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor / tooling
+.vscode/
+.idea/
+*.log
+
+# Local preview config (not needed for deployment)
+.claude/
+
+# Original full-size photos — the site only uses the optimised
+# copies in assets/img/. Kept local to keep the repo small.
+_source/

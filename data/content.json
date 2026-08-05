@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "site": {
+    "name": "DJ Reese",
+    "legalName": "DJ Reese",
+    "tagline": "Open Format. Any Crowd. All Energy.",
+    "url": "https://djreese.com",
+    "description": "DJ Reese is an open format DJ based in Tuscaloosa, Alabama. Clubs, bars, fraternity and private events across the Southeast and beyond. Seamless transitions, unique mixes, unmatched energy."
+  },
+  "theme": {
+    "preset": "midnight",
+    "primary": "#3B82F6",
+    "secondary": "#8B5CF6",
+    "accent": "#EC4899",
+    "bg": "#05060F",
+    "surface": "#0C0E20",
+    "text": "#EEF1FF"
+  },
+  "hero": {
+    "eyebrow": "Tuscaloosa, Alabama — Open Format DJ",
+    "titleLine1": "Open Format.",
+    "titleLine2": "Any Crowd.",
+    "titleLine3": "All Energy.",
+    "subtitle": "Clubs, bars, fraternities and private events across the Southeast — and wherever the booking takes him.",
+    "ctaPrimary": "Book DJ Reese",
+    "ctaSecondary": "Download EPK",
+    "image": "assets/img/hero/hero",
+    "focalPoint": "50% 38%",
+    "ticker": [
+      "Egan's",
+      "Twelve25",
+      "The Houndstooth",
+      "The Fennec",
+      "Tin Roof",
+      "Rounders",
+      "The Grandstand",
+      "Bimini, Bahamas",
+      "Bar South",
+      "Tango's",
+      "The Silver Dollar",
+      "Rhythm and Brews"
+    ]
+  },
+  "stats": [
+    { "value": "7", "suffix": "", "label": "States Played" },
+    { "value": "2", "suffix": "+", "label": "Years Experience" },
+    { "value": "18", "suffix": "+", "label": "Venues & Clubs" },
+    { "value": "1", "suffix": "", "label": "International Booking" }
+  ],
+  "about": {
+    "eyebrow": "The Artist",
+    "heading": "Reads the room. Runs the night.",
+    "bio1": "DJ Reese is a rising open-format DJ based in Tuscaloosa, Alabama, known for his ability to read any crowd and seamlessly switch between genres to keep the energy high all night. With a deep passion for music, Reese began DJing out of pure love for sound and quickly turned that passion into a fast-growing career.",
+    "bio2": "What sets DJ Reese apart is his versatility and creativity. From hip-hop to house and everything in between, he blends styles effortlessly while incorporating his own unique mixes and edits of popular tracks. His ability to adapt to an audience has made him one of the most in-demand DJs in the region.",
+    "image": "assets/img/gallery/reese-club-purple",
+    "imageAlt": "DJ Reese behind the decks under purple club lighting",
+    "facts": [
+      { "label": "Genre", "value": "Open Format" },
+      { "label": "Experience", "value": "2+ Years" },
+      { "label": "Based In", "value": "Tuscaloosa, Alabama" },
+      { "label": "States Played", "value": "7" },
+      { "label": "Known For", "value": "Seamless Transitions, Unique Mixes & Unmatched Energy" }
+    ]
+  },
+  "collaborations": {
+    "eyebrow": "Notable Collaborations",
+    "heading": "Shared the stage with",
+    "items": [
+      { "name": "Lil Mosey", "role": "Recording Artist" },
+      { "name": "Nate Wyatt", "role": "Recording Artist" },
+      { "name": "RedCup Nation", "role": "Event Brand" },
+      { "name": "2Checks", "role": "Recording Artist" }
+    ]
+  },
+  "venues": {
+    "eyebrow": "Locations Played",
+    "heading": "From Tuscaloosa to the Bahamas",
+    "subheading": "Multi-state performances across the Southeast, plus international bookings.",
+    "groups": [
+      {
+        "city": "Tuscaloosa",
+        "region": "Alabama",
+        "items": [
+          "Egan's",
+          "Twelve25",
+          "The Grandstand",
+          "The Houndstooth",
+          "Rounders",
+          "Cocktail Collection",
+          "Rhythm and Brews"
+        ]
+      },
+      {
+        "city": "Birmingham",
+        "region": "Alabama",
+        "items": ["The Fennec", "Tin Roof"]
+      },
+      {
+        "city": "Other Cities",
+        "region": "Southeast & International",
+        "items": [
+          "Tango's — Oxford, MS",
+          "Updawg — Athens, GA",
+          "Cloud — Athens, GA",
+          "The Silver Dollar — Athens, GA",
+          "The Tiki Bar — Panama City Beach, FL",
+          "Bimini, Bahamas — Spring Break Booking",
+          "Undeclared — Knoxville, TN",
+          "Bar South — Atlanta, GA"
+        ]
+      }
+    ],
+    "highlights": [
+      "Multi-State Performances Across the Southeast",
+      "International Booking (Bimini, Bahamas)",
+      "Fraternity & Private Events",
+      "Clubs, Bars & Signature Events",
+      "High-Energy, Crowd-Focused Sets"
+    ]
+  },
+  "gallery": {
+    "eyebrow": "Media",
+    "heading": "Photos & Video",
+    "subheading": "Live sets, packed rooms and late nights.",
+    "items": [
+      {
+        "id": "g1",
+        "type": "image",
+        "src": "assets/img/gallery/reese-crowd-fisheye",
+        "alt": "Crowd with hands up during a DJ Reese open format set",
+        "caption": "Hands up — peak hour",
+        "size": "wide"
+      },
+      {
+        "id": "g2",
+        "type": "image",
+        "src": "assets/img/gallery/reese-club-purple",
+        "alt": "DJ Reese behind the decks under purple club lighting",
+        "caption": "Club night",
+        "size": "tall"
+      },
+      {
+        "id": "g3",
+        "type": "image",
+        "src": "assets/img/gallery/reese-decks-hellstar",
+        "alt": "DJ Reese mixing on Pioneer CDJs during a live set",
+        "caption": "On the decks",
+        "size": "tall"
+      },
+      {
+        "id": "g4",
+        "type": "image",
+        "src": "assets/img/gallery/reese-packed-house",
+        "alt": "DJ Reese playing to a packed bar crowd",
+        "caption": "Packed house",
+        "size": "wide"
+      },
+      {
+        "id": "g5",
+        "type": "image",
+        "src": "assets/img/gallery/reese-blue-mix",
+        "alt": "DJ Reese blending tracks under blue stage lights",
+        "caption": "Blue hour",
+        "size": "normal"
+      },
+      {
+        "id": "g6",
+        "type": "image",
+        "src": "assets/img/gallery/reese-rane-turntables",
+        "alt": "DJ Reese on Rane turntables at a club night",
+        "caption": "Turntables",
+        "size": "normal"
+      },
+      {
+        "id": "g7",
+        "type": "image",
+        "src": "assets/img/gallery/reese-live-crowd",
+        "alt": "DJ Reese working a packed tent party in Tuscaloosa, Alabama",
+        "caption": "Tent party",
+        "size": "normal"
+      },
+      {
+        "id": "g8",
+        "type": "image",
+        "src": "assets/img/gallery/reese-booth-portrait",
+        "alt": "DJ Reese in the booth wearing headphones",
+        "caption": "In the booth",
+        "size": "normal"
+      },
+      {
+        "id": "g9",
+        "type": "image",
+        "src": "assets/img/gallery/reese-green-lights",
+        "alt": "DJ Reese performing for a crowd under stage lighting",
+        "caption": "Lights down",
+        "size": "normal"
+      }
+    ]
+  },
+  "epk": {
+    "eyebrow": "Press Kit",
+    "heading": "Electronic Press Kit",
+    "body": "Everything promoters and venues need in one place — bio, stats, notable collaborations, venue history and contact details. Download the full EPK or view it below.",
+    "preview": "assets/img/epk/epk-preview",
+    "previewAlt": "DJ Reese electronic press kit",
+    "downloadPdf": "assets/epk/DJ-Reese-EPK.pdf",
+    "downloadImage": "assets/epk/DJ-Reese-EPK.jpg",
+    "buttonLabel": "Download EPK (PDF)"
+  },
+  "availability": {
+    "eyebrow": "Availability",
+    "heading": "Book a date",
+    "subheading": "Open dates are live below. Select a date to start a booking request — bookings are confirmed by DJ Reese directly.",
+    "note": "Availability is updated regularly. If a date shows as held, reach out anyway — plans change.",
+    "dates": {}
+  },
+  "socials": [
+    {
+      "id": "s1",
+      "platform": "instagram",
+      "username": "@omgdjreese",
+      "url": "https://instagram.com/omgdjreese",
+      "enabled": true
+    },
+    {
+      "id": "s2",
+      "platform": "tiktok",
+      "username": "@iamdjreese",
+      "url": "https://tiktok.com/@iamdjreese",
+      "enabled": true
+    },
+    {
+      "id": "s3",
+      "platform": "youtube",
+      "username": "@yourhandle",
+      "url": "",
+      "enabled": false
+    },
+    {
+      "id": "s4",
+      "platform": "soundcloud",
+      "username": "yourhandle",
+      "url": "",
+      "enabled": false
+    }
+  ],
+  "contact": {
+    "eyebrow": "Bookings",
+    "heading": "Let's make it a movie.",
+    "subheading": "Clubs, bars, fraternity formals, private parties and festivals. Tell me the date and the vibe.",
+    "email": "bookings@djreese.com",
+    "phone": "(205) 773-9529",
+    "phoneHref": "+12057739529",
+    "location": "Tuscaloosa, Alabama",
+    "travelNote": "Available for travel — Southeast and international.",
+    "formEndpoint": "",
+    "quote": "\"Open format, nonstop energy — DJ Reese controls the crowd.\""
+  },
+  "footer": {
+    "blurb": "Open format DJ based in Tuscaloosa, Alabama. Booking nationwide and international.",
+    "credit": "DJ Reese"
+  }
+}

@@ -152,7 +152,8 @@
           "The Tiki Bar — Panama City Beach, FL",
           "Bimini, Bahamas — Spring Break Booking",
           "Undeclared — Knoxville, TN",
-          "Bar South — Atlanta, GA"
+          "Bar South — Atlanta, GA",
+          "No Proof — Charlotte, NC"
         ]
       }
     ],
@@ -299,7 +300,8 @@
     "location": "Tuscaloosa, Alabama",
     "travelNote": "Available for travel — Southeast and international.",
     "formEndpoint": "",
-    "quote": "\"Open format, nonstop energy — DJ Reese controls the crowd.\""
+    "quote": "\"Open format, nonstop energy — DJ Reese controls the crowd.\"",
+    "email": "reesesmith2005@gmail.com"
   },
   "footer": {
     "blurb": "Open format DJ based in Tuscaloosa, Alabama. Booking nationwide and international.",

@@ -671,18 +671,23 @@ ul, ol, dl { list-style: none; padding: 0; }
 }
 .venue-card__head {
   display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
-  /* fixed block so the rule lines up across cards even when a title wraps */
-  min-height: 3.4em;
+  /* fixed block so the rule lines up across cards even when the region
+     label opposite the city wraps onto a second line */
+  min-height: 4.3em;
   padding-bottom: 1rem; margin-bottom: 1rem;
   border-bottom: 1px solid var(--c-line);
 }
 .venue-card__head h3 {
   font-family: var(--font-display); font-size: var(--fs-h3);
   font-weight: 700; letter-spacing: -.02em;
+  /* keep the city on one line so the rule below sits at the same
+     height in every card, however long the region label is */
+  white-space: nowrap;
 }
 .venue-card__head span {
   font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
   color: var(--c-faint); text-align: right;
+  flex: 0 1 auto; min-width: 0;
 }
 .venue-list li {
   display: flex; align-items: flex-start; gap: .65rem;

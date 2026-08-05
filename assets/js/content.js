@@ -82,7 +82,7 @@
           items: ["Tango's — Oxford, MS", 'Updawg — Athens, GA', 'Cloud — Athens, GA',
                   'The Silver Dollar — Athens, GA', 'The Tiki Bar — Panama City Beach, FL',
                   'Bimini, Bahamas — Spring Break Booking', 'Undeclared — Knoxville, TN',
-                  'Bar South — Atlanta, GA'] }
+                  'Bar South — Atlanta, GA', 'No Proof — Charlotte, NC'] }
       ],
       highlights: [
         'Multi-State Performances Across the Southeast',
@@ -132,6 +132,9 @@
     contact: {
       eyebrow: 'Bookings', heading: "Let's make it a movie.",
       subheading: 'Clubs, bars, fraternity formals, private parties and festivals. Tell me the date and the vibe.',
+      // Booking destination for the contact form only — deliberately not rendered
+      // anywhere on the page. See the "Bookings" note in README.md.
+      email: 'reesesmith2005@gmail.com',
       phone: '(205) 773-9529', phoneHref: '+12057739529',
       location: 'Tuscaloosa, Alabama',
       travelNote: 'Available for travel — Southeast and international.',

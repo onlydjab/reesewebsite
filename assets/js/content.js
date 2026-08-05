@@ -132,7 +132,6 @@
     contact: {
       eyebrow: 'Bookings', heading: "Let's make it a movie.",
       subheading: 'Clubs, bars, fraternity formals, private parties and festivals. Tell me the date and the vibe.',
-      email: 'bookings@djreese.com',
       phone: '(205) 773-9529', phoneHref: '+12057739529',
       location: 'Tuscaloosa, Alabama',
       travelNote: 'Available for travel — Southeast and international.',

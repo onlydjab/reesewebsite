@@ -42,10 +42,26 @@
     ]
   },
   "stats": [
-    { "value": "7", "suffix": "", "label": "States Played" },
-    { "value": "2", "suffix": "+", "label": "Years Experience" },
-    { "value": "18", "suffix": "+", "label": "Venues & Clubs" },
-    { "value": "1", "suffix": "", "label": "International Booking" }
+    {
+      "value": "7",
+      "suffix": "",
+      "label": "States Played"
+    },
+    {
+      "value": "2",
+      "suffix": "+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "18",
+      "suffix": "+",
+      "label": "Venues & Clubs"
+    },
+    {
+      "value": "1",
+      "suffix": "",
+      "label": "International Booking"
+    }
   ],
   "about": {
     "eyebrow": "The Artist",
@@ -55,21 +71,48 @@
     "image": "assets/img/gallery/reese-club-purple",
     "imageAlt": "DJ Reese behind the decks under purple club lighting",
     "facts": [
-      { "label": "Genre", "value": "Open Format" },
-      { "label": "Experience", "value": "2+ Years" },
-      { "label": "Based In", "value": "Tuscaloosa, Alabama" },
-      { "label": "States Played", "value": "7" },
-      { "label": "Known For", "value": "Seamless Transitions, Unique Mixes & Unmatched Energy" }
+      {
+        "label": "Genre",
+        "value": "Open Format"
+      },
+      {
+        "label": "Experience",
+        "value": "2+ Years"
+      },
+      {
+        "label": "Based In",
+        "value": "Tuscaloosa, Alabama"
+      },
+      {
+        "label": "States Played",
+        "value": "7"
+      },
+      {
+        "label": "Known For",
+        "value": "Seamless Transitions, Unique Mixes & Unmatched Energy"
+      }
     ]
   },
   "collaborations": {
     "eyebrow": "Notable Collaborations",
     "heading": "Shared the stage with",
     "items": [
-      { "name": "Lil Mosey", "role": "Recording Artist" },
-      { "name": "Nate Wyatt", "role": "Recording Artist" },
-      { "name": "RedCup Nation", "role": "Event Brand" },
-      { "name": "2Checks", "role": "Recording Artist" }
+      {
+        "name": "Lil Mosey",
+        "role": "Recording Artist"
+      },
+      {
+        "name": "Nate Wyatt",
+        "role": "Recording Artist"
+      },
+      {
+        "name": "RedCup Nation",
+        "role": "Event Brand"
+      },
+      {
+        "name": "2Checks",
+        "role": "Recording Artist"
+      }
     ]
   },
   "venues": {
@@ -93,7 +136,10 @@
       {
         "city": "Birmingham",
         "region": "Alabama",
-        "items": ["The Fennec", "Tin Roof"]
+        "items": [
+          "The Fennec",
+          "Tin Roof"
+        ]
       },
       {
         "city": "Other Cities",
@@ -248,7 +294,6 @@
     "eyebrow": "Bookings",
     "heading": "Let's make it a movie.",
     "subheading": "Clubs, bars, fraternity formals, private parties and festivals. Tell me the date and the vibe.",
-    "email": "bookings@djreese.com",
     "phone": "(205) 773-9529",
     "phoneHref": "+12057739529",
     "location": "Tuscaloosa, Alabama",

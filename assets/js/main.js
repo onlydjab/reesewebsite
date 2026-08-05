@@ -29,7 +29,7 @@
 
     // links whose href mirrors their text
     var email = C.get(content, 'contact.email') || '';
-    $$('a[href^="mailto:"]').forEach(function (a) { a.href = 'mailto:' + email; });
+    if (email) $$('a[href^="mailto:"]').forEach(function (a) { a.href = 'mailto:' + email; });
 
     var tel = C.get(content, 'contact.phoneHref') || '';
     $$('a[href^="tel:"]').forEach(function (a) { a.href = 'tel:' + tel; });
@@ -611,9 +611,19 @@
     var status = $('#bookingStatus');
     var endpoint = C.get(content, 'contact.formEndpoint') || '';
     var to = C.get(content, 'contact.email') || '';
+    var sms = C.get(content, 'contact.phoneHref') || '';
+    var phone = C.get(content, 'contact.phone') || sms;
     var fineprint = $('.booking__fineprint');
-    if (fineprint && endpoint) {
-      fineprint.textContent = 'Your request is sent straight to DJ Reese. Expect a reply within 48 hours.';
+    if (fineprint) {
+      if (endpoint) {
+        fineprint.textContent = 'Your request is sent straight to DJ Reese. Expect a reply within 48 hours.';
+      } else if (to) {
+        fineprint.textContent = 'Opens your email app with the details filled in, so nothing is stored on this site.';
+      } else if (sms) {
+        fineprint.textContent = 'Opens a text message to DJ Reese with the details filled in, so nothing is stored on this site.';
+      } else {
+        fineprint.textContent = 'Nothing you type here is stored on this site.';
+      }
     }
 
     form.addEventListener('submit', function (e) {
@@ -649,23 +659,40 @@
           status.textContent = 'Booking request sent. You will hear back shortly.';
           status.className = 'booking__status is-ok';
         }).catch(function () {
-          status.textContent = 'Could not send — opening your email app instead.';
+          var r = handoff(data, lines);
+          status.textContent = 'Could not send — ' + r.msg;
           status.className = 'booking__status is-err';
-          openMail(to, data, lines);
         });
       } else {
-        openMail(to, data, lines);
-        status.textContent = 'Your email app should now be open with the details filled in.';
-        status.className = 'booking__status is-ok';
+        var r = handoff(data, lines);
+        status.textContent = r.msg.charAt(0).toUpperCase() + r.msg.slice(1);
+        status.className = 'booking__status ' + (r.ok ? 'is-ok' : 'is-err');
       }
     });
 
-    function openMail(addr, data, body) {
+    /* Hands the request off to whatever channel is configured. Returns the
+       sentence to show the visitor, and whether the handoff actually
+       happened — if no channel is set up there is nowhere to send them. */
+    function handoff(data, body) {
       var subject = 'Booking request — ' + (data.eventType || 'Event') +
                     (data.date ? ' on ' + data.date : '');
-      window.location.href = 'mailto:' + addr +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(body);
+
+      if (to) {
+        window.location.href = 'mailto:' + to +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(body);
+        return { ok: true, msg: 'your email app should now be open with the details filled in.' };
+      }
+
+      if (sms) {
+        // iOS wants `&body=`, everything else wants `?body=` — `?&body=`
+        // is the one form both parse correctly.
+        window.location.href = 'sms:' + sms +
+          '?&body=' + encodeURIComponent(subject + '\n\n' + body);
+        return { ok: true, msg: 'your messages app should now be open with the details filled in.' };
+      }
+
+      return { ok: false, msg: 'text ' + (phone || 'DJ Reese') + ' with your event details to book.' };
     }
   }
 

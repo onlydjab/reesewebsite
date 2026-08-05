@@ -11,7 +11,7 @@ No build step. No npm. No server. Drop it on GitHub Pages and it runs.
 
 | # | What | Where |
 |---|------|-------|
-| 1 | **Set the real booking email.** It currently says `bookings@djreese.com`, which is a placeholder. | Dashboard → *Text & Content* → *Bookings & contact* |
+| 1 | **Optional: add a booking email.** The site ships with no email address — bookings go to the phone number by text. Add one here if you want email instead. | Dashboard → *Text & Content* → *Bookings & contact* |
 | 2 | **Add YouTube + SoundCloud links.** They ship switched **off** because the real handles weren't known — guessing would have linked to strangers' profiles. Paste the real URLs and flip *Show on*. | Dashboard → *Social Links* |
 | 3 | **Change the dashboard password.** The username is `reese`; the password is not stored in this repo. | Dashboard → *Settings* → *Change password* |
 | 4 | **Replace the domain.** `https://djreese.com` appears in the canonical tag, Open Graph tags, `sitemap.xml` and `robots.txt`. Swap it for your real URL. | `index.html`, `sitemap.xml`, `robots.txt` |

@@ -391,7 +391,10 @@
     gct._body.appendChild(bindText('contact.heading', 'Heading'));
     gct._body.appendChild(bindText('contact.subheading', 'Sub-heading', { multiline: true, rows: 2 }));
     var cr = document.createElement('div'); cr.className = 'field--row';
-    cr.appendChild(bindText('contact.email', 'Booking email', { type: 'email' }));
+    cr.appendChild(bindText('contact.email', 'Booking email (optional)', {
+      type: 'email',
+      hint: 'Leave blank and the booking form opens a text message to the phone number below instead.'
+    }));
     cr.appendChild(bindText('contact.phone', 'Phone (shown)'));
     gct._body.appendChild(cr);
     gct._body.appendChild(bindText('contact.phoneHref', 'Phone (dial format)', { hint: 'Digits only with country code, e.g. +12057739529' }));

@@ -1083,8 +1083,8 @@ a.contact__v:hover { border-color: var(--c-primary); color: var(--c-primary); }
 .footer__nav { display: flex; flex-direction: column; align-items: flex-start; gap: .55rem; }
 .footer__nav a { font-size: .89rem; color: var(--c-muted); transition: color .25s var(--ease), transform .25s var(--ease); }
 .footer__nav a:hover { color: var(--c-text); transform: translateX(3px); }
-.footer__mail { display: inline-block; margin-top: 1rem; font-size: .87rem; color: var(--c-muted); border-bottom: 1px solid var(--c-line-2); }
-.footer__mail:hover { color: var(--c-text); border-color: var(--c-primary); }
+.footer__contact { display: inline-block; margin-top: 1rem; font-size: .87rem; color: var(--c-muted); border-bottom: 1px solid var(--c-line-2); }
+.footer__contact:hover { color: var(--c-text); border-color: var(--c-primary); }
 
 .footer__base {
   display: flex; align-items: center; justify-content: space-between;
